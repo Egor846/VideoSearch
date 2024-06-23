@@ -1,8 +1,10 @@
 package com.example.videosearch
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.Toast
+import android.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,34 +21,36 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        initMenuButtons()
+       initMenuButtons()
+
 
     }
 
 
-    fun initMenuButtons() {
-        val menuButton: Button = findViewById(R.id.menu)
-        menuButton.setOnClickListener {
-            Toast.makeText(this, "Меню", Toast.LENGTH_SHORT).show()
+    private fun initMenuButtons() {
+        val settingsButton = findViewById<View>(R.id.settings)
+        settingsButton.setOnClickListener (){
+            Toast.makeText(this, "Настройки", Toast.LENGTH_SHORT).show()
         }
 
-        val favorites: Button = findViewById(R.id.favorites)
-        favorites.setOnClickListener {
+        val favoritesButton = findViewById<View>(R.id.favorites)
+        favoritesButton.setOnClickListener (){
             Toast.makeText(this, "Избранное", Toast.LENGTH_SHORT).show()
         }
-        val posmotretPozzhe: Button = findViewById(R.id.posmotret_pozzhe)
-        posmotretPozzhe.setOnClickListener {
-            Toast.makeText(this, "Посмотреть позже", Toast.LENGTH_SHORT).show()
-        }
 
-        val podborki: Button = findViewById(R.id.podborki)
-        podborki.setOnClickListener {
+        val podborkiButton = findViewById<View>(R.id.podborki)
+        podborkiButton.setOnClickListener (){
             Toast.makeText(this, "Подборки", Toast.LENGTH_SHORT).show()
         }
 
-        val settings: Button = findViewById(R.id.settings)
-        settings.setOnClickListener {
-            Toast.makeText(this, "Настройки", Toast.LENGTH_SHORT).show()
+        val watchLaterButton = findViewById<View>(R.id.watch_later)
+        watchLaterButton.setOnClickListener (){
+            Toast.makeText(this, "Посмотреть позже", Toast.LENGTH_SHORT).show()
         }
+
+
+
+
+
     }
 }

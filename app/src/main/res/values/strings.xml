@@ -6,5 +6,8 @@
     <string name="podborki">Подборки</string>
     <string name="settings">Настройки</string>
     <string name="site_posters">Постеры предоставлены Google.com</string>
+    <string name="menu_favorites_title">\"Избранное\"</string>
+    <string name="menu_watch_later_title">\"Посмотреть позже\"</string>
+    <string name="menu_podborki_title">\"Подборки\"</string>
 
 </resources>
