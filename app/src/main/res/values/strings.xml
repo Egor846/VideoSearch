@@ -9,5 +9,7 @@
     <string name="menu_favorites_title">\"Избранное\"</string>
     <string name="menu_watch_later_title">\"Посмотреть позже\"</string>
     <string name="menu_podborki_title">\"Подборки\"</string>
+    <string name="second_animation">Второй способ</string>
+    <string name="third_animation">Третий способ</string>
 
 </resources>

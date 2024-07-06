@@ -1,36 +1,28 @@
 package com.example.videosearch
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class ThirdWayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_third_way)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        Toast.makeText(this, "Первый способ", Toast.LENGTH_SHORT).show()
         initMenuButtons()
-        val theSecondAnimationButton: Button = findViewById(R.id.theSecondAnimationButton)
-        theSecondAnimationButton.setOnClickListener{
-            val intent = Intent(this,SecondWayActivity::class.java)
-            startActivity(intent)
-            Toast.makeText(this, "Второй способ", Toast.LENGTH_SHORT).show()
-        }
+
+
 
     }
-
 
     private fun initMenuButtons() {
         val settingsButton = findViewById<View>(R.id.settings)
@@ -52,7 +44,6 @@ class MainActivity : AppCompatActivity() {
         watchLaterButton.setOnClickListener() {
             Toast.makeText(this, "Посмотреть позже", Toast.LENGTH_SHORT).show()
         }
-
 
     }
 }

@@ -10,27 +10,28 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class SecondWayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_second_way)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        Toast.makeText(this, "Первый способ", Toast.LENGTH_SHORT).show()
         initMenuButtons()
-        val theSecondAnimationButton: Button = findViewById(R.id.theSecondAnimationButton)
-        theSecondAnimationButton.setOnClickListener{
-            val intent = Intent(this,SecondWayActivity::class.java)
+
+
+
+        val theThirdAnimationButton: Button = findViewById(R.id.theThirdAnimationButton)
+        theThirdAnimationButton.setOnClickListener{
+            val intent = Intent(this,ThirdWayActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this, "Второй способ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Третий способ", Toast.LENGTH_SHORT).show()
         }
 
     }
-
 
     private fun initMenuButtons() {
         val settingsButton = findViewById<View>(R.id.settings)
