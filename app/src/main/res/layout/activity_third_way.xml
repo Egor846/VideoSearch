@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ThirdWayActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
@@ -97,28 +97,10 @@
         android:textColor="@color/white"
         android:text="@string/site_posters"
         app:layout_constraintTop_toBottomOf="@+id/posters_cardview"
-        app:layout_constraintBottom_toTopOf="@id/button_container"
+        app:layout_constraintBottom_toTopOf="@id/grid_layout"
         />
 
-    <LinearLayout
-        android:id="@+id/button_container"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/main"
-        app:layout_constraintEnd_toEndOf="@id/main"
-        app:layout_constraintBottom_toTopOf="@id/grid_layout"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <Button
-            android:id="@+id/theSecondAnimationButton"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/second_animation"
-
-            />
-
-    </LinearLayout>
 
 
     <GridLayout
@@ -132,8 +114,8 @@
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_container"
-        android:layoutAnimation="@anim/layout_animation"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        android:layoutAnimation="@anim/third_animation_set"
         >
 
 
